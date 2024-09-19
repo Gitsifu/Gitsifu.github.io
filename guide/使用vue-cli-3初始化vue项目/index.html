@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>使用Vue-cli@3.0初始化Vue项目 | sifu</title>
+    <meta name="generator" content="VuePress 1.7.1">
+    <link rel="icon" href="/favicon.ico">
+    <script src="/js/copy.js"></script>
+    <script>var _hmt = _hmt || [];
+          (function() {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?4154732ae3f881b11e22879788c95f64";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+          })();</script>
+    <meta name="description" content="关于旧版本
+>
+>Vue CLI 的包名称由 vue-cli 改成了 @vue/cli。 如果你已经全局安装了旧版本的 vue-cli (1.x 或 2.x)，你需要先>通过 npm uninstall vue-cli -g 或 yarn global remove vue-cli 卸载它。
+文章结构
+ 安装
+检查版本
+初始化项目
+运行
+项 ...">
+    <meta name="referrer" content="never">
+    
+    <link rel="preload" href="/assets/css/0.styles.8fb6f01d.css" as="style"><link rel="preload" href="/assets/js/app.798c06ff.js" as="script"><link rel="preload" href="/assets/js/6.419b3026.js" as="script"><link rel="preload" href="/assets/js/3.a20ed48e.js" as="script"><link rel="preload" href="/assets/js/42.fbb07f44.js" as="script"><link rel="prefetch" href="/assets/js/10.5f35622a.js"><link rel="prefetch" href="/assets/js/11.daaf2444.js"><link rel="prefetch" href="/assets/js/12.b12045d2.js"><link rel="prefetch" href="/assets/js/13.ffeeae92.js"><link rel="prefetch" href="/assets/js/14.7625cdae.js"><link rel="prefetch" href="/assets/js/15.b2912b5f.js"><link rel="prefetch" href="/assets/js/16.6833ef68.js"><link rel="prefetch" href="/assets/js/17.a7b87c8d.js"><link rel="prefetch" href="/assets/js/18.44b1b529.js"><link rel="prefetch" href="/assets/js/19.11de3415.js"><link rel="prefetch" href="/assets/js/20.7afbf677.js"><link rel="prefetch" href="/assets/js/21.4473d6c8.js"><link rel="prefetch" href="/assets/js/22.ae24cc01.js"><link rel="prefetch" href="/assets/js/23.4c77454e.js"><link rel="prefetch" href="/assets/js/24.fa2c63b5.js"><link rel="prefetch" href="/assets/js/25.3480d931.js"><link rel="prefetch" href="/assets/js/26.3e49bc65.js"><link rel="prefetch" href="/assets/js/27.ffc50242.js"><link rel="prefetch" href="/assets/js/28.2ce8de7d.js"><link rel="prefetch" href="/assets/js/29.6ed0ad47.js"><link rel="prefetch" href="/assets/js/30.ba27d54c.js"><link rel="prefetch" href="/assets/js/31.596138b8.js"><link rel="prefetch" href="/assets/js/32.9493f1fc.js"><link rel="prefetch" href="/assets/js/33.4279ce4f.js"><link rel="prefetch" href="/assets/js/34.be796bf3.js"><link rel="prefetch" href="/assets/js/35.d42d0824.js"><link rel="prefetch" href="/assets/js/36.f742eea8.js"><link rel="prefetch" href="/assets/js/37.36fbff38.js"><link rel="prefetch" href="/assets/js/38.ee60377f.js"><link rel="prefetch" href="/assets/js/39.a77db7fd.js"><link rel="prefetch" href="/assets/js/4.339e21db.js"><link rel="prefetch" href="/assets/js/40.cd1bcd2a.js"><link rel="prefetch" href="/assets/js/41.8db316a9.js"><link rel="prefetch" href="/assets/js/43.ae7c2759.js"><link rel="prefetch" href="/assets/js/44.7ba59903.js"><link rel="prefetch" href="/assets/js/45.9e38b95f.js"><link rel="prefetch" href="/assets/js/46.8c0d9fd0.js"><link rel="prefetch" href="/assets/js/47.6594b40c.js"><link rel="prefetch" href="/assets/js/48.09c97d26.js"><link rel="prefetch" href="/assets/js/49.1a5a8b84.js"><link rel="prefetch" href="/assets/js/5.6f1bd6ed.js"><link rel="prefetch" href="/assets/js/50.127a7cbc.js"><link rel="prefetch" href="/assets/js/51.c416307c.js"><link rel="prefetch" href="/assets/js/52.15dc0d29.js"><link rel="prefetch" href="/assets/js/53.d973a7e2.js"><link rel="prefetch" href="/assets/js/54.1890c621.js"><link rel="prefetch" href="/assets/js/55.1149e26c.js"><link rel="prefetch" href="/assets/js/7.320512d2.js"><link rel="prefetch" href="/assets/js/8.93e8ec40.js"><link rel="prefetch" href="/assets/js/9.e597bd03.js"><link rel="prefetch" href="/assets/js/vuejs-paginate.fe9ded24.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.8fb6f01d.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div id="vuepress-theme-blog__global-layout"><section id="header-wrapper"><header id="header"><div class="header-wrapper"><div class="title"><a href="/" class="nav-link home-link">sifu </a></div> <div class="header-right-wrap"><ul class="nav"><li class="nav-item"><a href="/" class="nav-link">首页</a></li><li class="nav-item"><a href="/guide/" class="nav-link router-link-active">武功秘籍</a></li><li class="nav-item"><a href="/writings/" class="nav-link">遨游江湖</a></li><li class="nav-item"><a href="/link/" class="nav-link">藏宝阁</a></li><li class="nav-item"><a href="/tag/" class="nav-link">秘籍标签</a></li></ul> <div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <!----></div></div></header></section> <div id="mobile-header"><div class="mobile-header-bar"><div class="mobile-header-title"><a href="/" class="nav-link mobile-home-link">sifu </a> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg></div> <div class="mobile-menu-wrapper"><hr class="menu-divider"> <ul class="mobile-nav"><li class="mobile-nav-item"><a href="/" class="nav-link">首页</a></li><li class="mobile-nav-item"><a href="/guide/" class="nav-link router-link-active">武功秘籍</a></li><li class="mobile-nav-item"><a href="/writings/" class="nav-link">遨游江湖</a></li><li class="mobile-nav-item"><a href="/link/" class="nav-link">藏宝阁</a></li><li class="mobile-nav-item"><a href="/tag/" class="nav-link">秘籍标签</a></li> <li class="mobile-nav-item"><!----></li></ul></div></div></div> <div class="content-wrapper"><div id="vuepress-theme-blog__post-layout"><article itemscope="itemscope" itemtype="https://schema.org/BlogPosting" class="vuepress-blog-theme-content"><header><h1 itemprop="name headline" class="post-title">
+        使用Vue-cli@3.0初始化Vue项目
+      </h1> <div class="post-meta"><div itemprop="publisher author" itemtype="http://schema.org/Person" itemscope="itemscope" class="post-meta-author"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-navigation"><polygon points="3 11 22 2 13 21 11 13 3 11"></polygon></svg> <span itemprop="name">sifu</span> <span itemprop="address">   in 南昌</span></div> <div class="post-meta-date"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-clock"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg> <time pubdate itemprop="datePublished" datetime="2020-11-27T00:00:00.000Z">
+      2020-11-27 Friday
+    </time></div> <ul itemprop="keywords" class="post-meta-tags"><li class="post-tag" data-v-42ccfcd5><a href="/tag/Vue" data-v-42ccfcd5><span data-v-42ccfcd5>Vue</span></a></li></ul></div></header> <div itemprop="articleBody" class="content__default"><blockquote><p><strong>关于旧版本</strong></p> <p>Vue CLI 的包名称由 vue-cli 改成了 @vue/cli。 如果你已经全局安装了旧版本的 vue-cli (1.x 或 2.x)，你需要先&gt;通过 npm uninstall vue-cli -g 或 yarn global remove vue-cli 卸载它。</p></blockquote> <p><strong>文章结构</strong></p> <ul><li>安装</li> <li>检查版本</li> <li>初始化项目</li> <li>运行</li> <li>项目目录</li> <li>自定义配置</li></ul> <hr> <p>#一、安装</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>npm install -g @vue/cli
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>#二、检查版本</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>vue --version
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>#三、初始化项目</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>vue create hello-world
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><blockquote><p><strong>警告</strong></p> <p>如果你在 Windows 上通过 minTTY 使用 Git Bash，交互提示符并不工作。你必须通过 winpty vue.cmd &gt;create hello-world 启动这个命令。</p></blockquote> <h2 id="_1、选择-manually-select-features"><a href="#_1、选择-manually-select-features" class="header-anchor">#</a> 1、选择 <code>Manually select features</code></h2> <div class="language- line-numbers-mode"><pre class="language-text"><code>Vue CLI v3.1.3
+? Please pick a preset: (Use arrow keys)
+&gt; default (babel, eslint)   //默认（安装bable、eslint）
+  Manually select features  //自定义
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><h2 id="_2、选择自定义配置"><a href="#_2、选择自定义配置" class="header-anchor">#</a> 2、选择自定义配置</h2> <ul><li>方向键上下移动，空格选中，Enter确定</li></ul> <div class="language- line-numbers-mode"><pre class="language-text"><code>Vue CLI v3.1.3
+? Please pick a preset: Manually select features
+? Check the features needed for your project: (Press &lt;space&gt; to select, &lt;a&gt; to toggle all, &lt;i&gt; to invert s
+election)
+&gt;(*) Babel   //ES6转ES5
+ ( ) TypeScript   //JS超集
+ ( ) Progressive Web App (PWA) Support   //渐进式Web应用
+ (*) Router  //路由
+ ( ) Vuex  //状态管理
+ (*) CSS Pre-processors  //CSS预处理
+ (*) Linter / Formatter   //规范类型
+ ( ) Unit Testing  //测试
+ ( ) E2E Testing  //测试
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br></div></div><h2 id="_3、是否使用history模式的路由"><a href="#_3、是否使用history模式的路由" class="header-anchor">#</a> 3、是否使用history模式的路由</h2> <div class="language- line-numbers-mode"><pre class="language-text"><code>Vue CLI v3.1.3
+? Please pick a preset: Manually select features
+? Check the features needed for your project: Babel, Router, CSS Pre-processors, Linter
+? Use history mode for router? (Requires proper server setup for index fallback in production) (Y/n)
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><p>##4、CSS预处理器选择</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>Vue CLI v3.1.3
+? Please pick a preset: Manually select features
+? Check the features needed for your project: Babel, Router, CSS Pre-processors, Linter
+? Use history mode for router? (Requires proper server setup for index fallback in production) Yes
+? Pick a CSS pre-processor (PostCSS, Autoprefixer and CSS Modules are supported by default): (Use arrow ke
+ys)
+&gt; Sass/SCSS
+  Less
+  Stylus
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br></div></div><h2 id="_5、选择哪个eslint自动化代码格式化检测"><a href="#_5、选择哪个eslint自动化代码格式化检测" class="header-anchor">#</a> 5、选择哪个ESLint自动化代码格式化检测</h2> <div class="language- line-numbers-mode"><pre class="language-text"><code>Vue CLI v3.1.3
+? Please pick a preset: Manually select features
+? Check the features needed for your project: Babel, Router, CSS Pre-processors, Linter
+? Use history mode for router? (Requires proper server setup for index fallback in production) Yes
+? Pick a CSS pre-processor (PostCSS, Autoprefixer and CSS Modules are supported by default): Sass/SCSS
+? Pick a linter / formatter config: (Use arrow keys)
+&gt; ESLint with error prevention only
+  ESLint + Airbnb config
+  ESLint + Standard config
+  ESLint + Prettier
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br></div></div><p>##6、选择语法检查的时期</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>Vue CLI v3.1.3
+? Please pick a preset: Manually select features
+? Check the features needed for your project: Babel, Router, CSS Pre-processors, Linter
+? Use history mode for router? (Requires proper server setup for index fallback in production) Yes
+? Pick a CSS pre-processor (PostCSS, Autoprefixer and CSS Modules are supported by default): Sass/SCSS
+? Pick a linter / formatter config: Standard
+? Pick additional lint features: (Press &lt;space&gt; to select, &lt;a&gt; to toggle all, &lt;i&gt; to invert selection)
+&gt;(*) Lint on save  //语法检查配置文件保存时检查
+ ( ) Lint and fix on commit  //文件提交时检查
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br></div></div><h2 id="_7、配置文件的存放位置-推荐独立放置配置文件"><a href="#_7、配置文件的存放位置-推荐独立放置配置文件" class="header-anchor">#</a> 7、配置文件的存放位置（推荐独立放置配置文件）</h2> <div class="language- line-numbers-mode"><pre class="language-text"><code>Vue CLI v3.1.3
+? Please pick a preset: Manually select features
+? Check the features needed for your project: Babel, Router, CSS Pre-processors, Linter
+? Use history mode for router? (Requires proper server setup for index fallback in production) Yes
+? Pick a CSS pre-processor (PostCSS, Autoprefixer and CSS Modules are supported by default): Sass/SCSS
+? Pick a linter / formatter config: Standard
+? Pick additional lint features: Lint on save
+? Where do you prefer placing config for Babel, PostCSS, ESLint, etc.? (Use arrow keys)
+&gt; In dedicated config files  //放独立文件放置
+  In package.json  //放package.json里
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br></div></div><h2 id="_8、是否保存此预设-选择yes的话下次就可以不用进行配置"><a href="#_8、是否保存此预设-选择yes的话下次就可以不用进行配置" class="header-anchor">#</a> 8、是否保存此预设(选择yes的话下次就可以不用进行配置)</h2> <div class="language- line-numbers-mode"><pre class="language-text"><code>Vue CLI v3.1.3
+? Please pick a preset: Manually select features
+? Check the features needed for your project: Babel, Router, CSS Pre-processors, Linter
+? Use history mode for router? (Requires proper server setup for index fallback in production) Yes
+? Pick a CSS pre-processor (PostCSS, Autoprefixer and CSS Modules are supported by default): Sass/SCSS
+? Pick a linter / formatter config: Standard
+? Pick additional lint features: Lint on save
+? Where do you prefer placing config for Babel, PostCSS, ESLint, etc.? In dedicated config files
+? Save this as a preset for future projects? (y/N)
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br></div></div><h2 id="_9、等待文件下载完"><a href="#_9、等待文件下载完" class="header-anchor">#</a> 9、等待文件下载完</h2> <div class="language- line-numbers-mode"><pre class="language-text"><code>Vue CLI v3.1.3
+✨  Creating project in C:\Users\sifu\Desktop\hello-world.
+🗃  Initializing git repository...
+⚙  Installing CLI plugins. This might take a while...
+
+
+&gt; yorkie@2.0.0 install C:\Users\sifu\Desktop\hello-world\node_modules\yorkie
+&gt; node bin/install.js
+
+setting up Git hooks
+done
+
+added 1109 packages from 737 contributors in 77.23s
+🚀  Invoking generators...
+📦  Installing additional dependencies...
+
+
+&gt; node-sass@4.10.0 install C:\Users\sifu\Desktop\hello-world\node_modules\node-sass
+&gt; node scripts/install.js
+
+Cached binary found at C:\Users\sifu\AppData\Roaming\npm-cache\node-sass\4.10.0\win32-x64-64_binding.node
+
+&gt; node-sass@4.10.0 postinstall C:\Users\sifu\Desktop\hello-world\node_modules\node-sass
+&gt; node scripts/build.js
+
+Binary found at C:\Users\sifu\Desktop\hello-world\node_modules\node-sass\vendor\win32-x64-64\binding.node
+Testing binary
+Binary is fine
+added 151 packages from 104 contributors, updated 2 packages and moved 5 packages in 36.792s
+⚓  Running completion hooks...
+
+📄  Generating README.md...
+
+🎉  Successfully created project hello-world.
+👉  Get started with the following commands:
+
+ $ cd hello-world
+ $ npm run serve
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br></div></div><p>#四、运行</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>cd hello-world
+
+npm run serve
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><p>浏览器访问：<a href="http://localhost:8080/" target="_blank" rel="noopener noreferrer">http://localhost:8080/<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a>，效果如下：
+<img src="https://upload-images.jianshu.io/upload_images/5011280-f7e18cad96c1f36d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p> <h1 id="五、项目目录"><a href="#五、项目目录" class="header-anchor">#</a> 五、项目目录</h1> <p><img src="https://upload-images.jianshu.io/upload_images/5011280-5ac44262d2b9ee3f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p> <p>相比于2.0，文件目录结构简洁不少，少的部分都是一些配置文件，<strong>那么以前的配置我们想自定义配置怎么办呢？</strong></p> <h1 id="五、自定义配置"><a href="#五、自定义配置" class="header-anchor">#</a> 五、自定义配置</h1> <p>1、在项目根目录下创建<code>vue.config.js</code>文件</p> <p><img src="https://upload-images.jianshu.io/upload_images/5011280-37b7e28d724af275.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p> <p>2、<code>vue.config.js</code>基本常用配置（其他的具体看<a href="https://cli.vuejs.org/zh/config/#vue-config-js" target="_blank" rel="noopener noreferrer">文档<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a>）</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>module.exports = {
+  devServer: {
+    port: 8888, // 端口号
+    host: 'localhost',
+    https: false,
+    open: false // 配置是否自动启动浏览器
+  }
+}
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br></div></div><!----></div> <footer><!----> <hr> <!----></footer></article> <div class="sticker vuepress-toc"><div class="vuepress-toc-item vuepress-toc-h2 active"><a href="#_1、选择-manually-select-features" title="1、选择  Manually select features">1、选择  Manually select features</a></div><div class="vuepress-toc-item vuepress-toc-h2"><a href="#_2、选择自定义配置" title="2、选择自定义配置">2、选择自定义配置</a></div><div class="vuepress-toc-item vuepress-toc-h2"><a href="#_3、是否使用history模式的路由" title="3、是否使用history模式的路由">3、是否使用history模式的路由</a></div><div class="vuepress-toc-item vuepress-toc-h2"><a href="#_5、选择哪个eslint自动化代码格式化检测" title="5、选择哪个ESLint自动化代码格式化检测">5、选择哪个ESLint自动化代码格式化检测</a></div><div class="vuepress-toc-item vuepress-toc-h2"><a href="#_7、配置文件的存放位置-推荐独立放置配置文件" title="7、配置文件的存放位置（推荐独立放置配置文件）">7、配置文件的存放位置（推荐独立放置配置文件）</a></div><div class="vuepress-toc-item vuepress-toc-h2"><a href="#_8、是否保存此预设-选择yes的话下次就可以不用进行配置" title="8、是否保存此预设(选择yes的话下次就可以不用进行配置)">8、是否保存此预设(选择yes的话下次就可以不用进行配置)</a></div><div class="vuepress-toc-item vuepress-toc-h2"><a href="#_9、等待文件下载完" title="9、等待文件下载完">9、等待文件下载完</a></div></div></div></div> <footer class="footer" data-v-3d9deeb8><div class="footer-left-wrap" data-v-3d9deeb8><ul class="contact" data-v-3d9deeb8><li class="contact-item" data-v-3d9deeb8><a href="https://github.com/Gitsifu" target="_blank" rel="noopener noreferrer" class="nav-link external" data-v-3d9deeb8><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github" data-v-3d9deeb8><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" data-v-3d9deeb8></path></svg>
+          
+        </a></li></ul></div> <div class="footer-right-wrap" data-v-3d9deeb8><ul class="copyright" data-v-3d9deeb8><li class="copyright-item" data-v-3d9deeb8>MIT Licensed | Copyright © 2016-present sifu</li></ul></div></footer></div><div class="global-ui"><div></div><!----><div class="kanbanniang" data-v-5775ee02><div class="banniang-container" style="display:;" data-v-5775ee02><div class="messageBox" style="right:68px;bottom:300px;display:none;" data-v-5775ee02>
+      欢迎来到sifu
+    </div> <div class="operation" style="right:90px;bottom:40px;display:;" data-v-5775ee02><i class="kbnfont kbn-ban-home ban-home" data-v-5775ee02></i> <i class="kbnfont kbn-ban-message message" data-v-5775ee02></i> <i class="kbnfont kbn-ban-close close" data-v-5775ee02></i> <a target="_blank" href="https://vuepress-theme-reco.recoluan.com/views/plugins/kanbanniang.html" data-v-5775ee02><i class="kbnfont kbn-ban-info info" data-v-5775ee02></i></a> <i class="kbnfont kbn-ban-theme skin" style="display:;" data-v-5775ee02></i></div> <canvas id="banniang" width="225" height="330" class="live2d" style="right:90px;bottom:-20px;opacity:0.9;" data-v-5775ee02></canvas></div> <div class="showBanNiang" style="display:none;" data-v-5775ee02>
+    看板娘
+  </div></div></div></div>
+    <script src="/assets/js/app.798c06ff.js" defer></script><script src="/assets/js/6.419b3026.js" defer></script><script src="/assets/js/3.a20ed48e.js" defer></script><script src="/assets/js/42.fbb07f44.js" defer></script>
+  </body>
+</html>
